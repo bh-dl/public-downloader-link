@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Document</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="styles.css"
+        />
+        <style>
+            p {
+                margin: 5% auto;
+            }
+
+            pre {
+                display: inline;
+            }
+        </style>
+    </head>
+    <body class="bg-dark-subtle">
+        <main class="container d-flex vh-100 align-items-center">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6">
+                    <div class="card shadow-lg p-3">
+                        <div class="card-body">
+                            In order to save the bookmarklet, drag the button onto your browser's bookmarks bar. Save it with whatever name you'd like. Once you
+                            go to a <strong>public</strong> BoundHub video, click the button and it will take you directly to their video host, from which you
+                            can do
+                            <pre>File -> Save</pre>
+                            , or
+                            <pre>Ctrl + S</pre>
+
+                            <p>
+                                <strong>Important note:</strong> you must let the video play for a second to actually load the video content. You'll be able to
+                                use the bookmarklet by simply clicking play and then pausing as soon as it loads on BoundHub.
+                            </p>
+
+                            <p>
+                                <a
+                                    title="BH Public Downloader"
+                                    id="BH Public Downloader"
+                                    href="javascript:(() => { const videoEl = document.getElementsByTagName('video')[0]; if (!videoEl) { return alert('No video was found, please try clicking play & pause first'); } const src = videoEl.src; if (!src) { return alert('Unable to parse the video source'); } window.open(src, '_blank'); })()"
+                                    class="btn btn-info"
+                                    >Drag Me</a
+                                >
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
